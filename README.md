@@ -2,15 +2,15 @@
 让你的应用通过手势滑动返回
 
 #Example
-![SwipeBackLayout.png](example.git)
+![SwipeBackLayout.png](example.gif)
 
 #Issue
 * 在4.4系统上滑动黑屏或显示桌面主题
 
   ```xml
   <style name="Main.AppTheme" parent="AppTheme.Base">
-        <!-- Customize your theme here. -->
-        <item name="android:windowIsTranslucent">false</item>
+        ##<!-- Customize your theme here. -->
+        **<item name="android:windowIsTranslucent">false</item>**
   </style>
   ```
     
