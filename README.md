@@ -2,12 +2,12 @@
 让你的应用通过手势滑动返回
 
 #Example
-![](example.git)
+![SwipeBackLayout.png](example.git)
 
 #Issue
 * 在4.4系统上滑动黑屏或显示桌面主题
 
-  ```
+  ```xml
   <style name="Main.AppTheme" parent="AppTheme.Base">
         <!-- Customize your theme here. -->
         <item name="android:windowIsTranslucent">false</item>
@@ -16,20 +16,16 @@
     
     主界面引用
     
-    ```
+    ```xml
      <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        `
-        android:theme="@style/AppTheme"
-        ` >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".activitys.MainActivity"
-            `
-            android:theme="@style/Main.AppTheme"
-            `>
+            android:theme="@style/Main.AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -40,7 +36,7 @@
         
 * 使用 Meterial Design 中，与 SystemBarTint 结合使用状态栏颜色问题
 
-  ```
+  ```java
     public void attachToActivity(Activity activity) {
         mActivity = activity;
         TypedArray a = activity.getTheme().obtainStyledAttributes(new int[]{
@@ -48,9 +44,7 @@
         });
         int background = a.getResourceId(0, 0);
         a.recycle();
-        `
         ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
-        `
         ViewGroup decorChild = (ViewGroup) decor.getChildAt(0);
         decorChild.setBackgroundResource(background);
         decor.removeView(decorChild);
@@ -62,7 +56,7 @@
 
   关键代码
 
-  ```
+  ```java
   ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
   ```
 
