@@ -2,7 +2,7 @@
 让你的应用通过手势滑动返回
 
 #Example
-![](SwipeBackLayout.git)
+![](example.git)
 
 #Issue
 * 在4.4系统上滑动黑屏或显示桌面主题
@@ -22,10 +22,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        `android:theme="@style/AppTheme"` >
+        `
+        android:theme="@style/AppTheme"
+        ` >
         <activity
             android:name=".activitys.MainActivity"
-            `android:theme="@style/Main.AppTheme" `>
+            `
+            android:theme="@style/Main.AppTheme"
+            `>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -44,7 +48,9 @@
         });
         int background = a.getResourceId(0, 0);
         a.recycle();
-        `ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);`
+        `
+        ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
+        `
         ViewGroup decorChild = (ViewGroup) decor.getChildAt(0);
         decorChild.setBackgroundResource(background);
         decor.removeView(decorChild);
@@ -61,8 +67,7 @@
   ```
 
 #Library
-###[SwipeBackLayout](https://github.com/ikew0ngSwipeBackLayout)
-###[SystemBarTint](https://github.com/xiaoqi05/SystemBarTint)
+###[SwipeBackLayout](https://github.com/ikew0ngSwipeBackLayout)&nbsp;&nbsp;&nbsp;[SystemBarTint](https://github.com/xiaoqi05/SystemBarTint)
 
 #License
 Copyright 2013 Square, Inc.
