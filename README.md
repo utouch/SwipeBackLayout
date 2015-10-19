@@ -34,7 +34,7 @@
         ...
     ```
         
-* 使用 Meterial Design 中，与 SystemBarTint 结合使用状态栏颜色问题
+* 使用 Meterial Design 中，与 SystemBarTint 结合使用状态栏被遮盖颜色问题
 
   ```java
     public void attachToActivity(Activity activity) {
@@ -56,7 +56,7 @@
 
   关键代码
 
-  ```java
+  ```android
   ViewGroup decor = (ViewGroup) activity.getWindow().getDecorView().findViewById(Window.ID_ANDROID_CONTENT);
   ```
 
