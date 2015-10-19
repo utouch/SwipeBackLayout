@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- make window translucent -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 主界面单独设置主题，以解决滑动看到桌面主题的问题-->
+    <style name="Main.AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SwipeBackLayout</string>
+    <string name="action_github">github</string>
+    <string name="action_act">CLONE</string>
+    <string name="action_def">SWIPE BACK WITH GESTURE</string>
+    <string name="url">https://github.com/utouch/SwipeBackLayout.git</string>
+
+</resources>
